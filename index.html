@@ -5,103 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sovereign Gateway | Smart Automation</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #0a0a0a;
-            color: #ffffff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .translate-wrapper {
-            margin-top: 10px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-        }
-        .tagline {
-            color: #00ff66;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 40px;
-        }
-        .pitch-box {
-            background-color: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            text-align: left;
-        }
-        .pitch-box h3 {
-            color: #00ff66;
-            margin-top: 0;
-        }
-        .pitch-box p {
-            line-height: 1.6;
-            color: #cccccc;
-        }
-        .cta-btn {
-            display: inline-block;
-            background-color: #00ff66;
-            color: #000000;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            padding: 15px 30px;
-            border-radius: 5px;
-            margin-top: 20px;
-            box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
-            transition: 0.3s;
-        }
-        .cta-btn:hover {
-            box-shadow: 0 0 25px rgba(0, 255, 102, 0.7);
-        }
+        :root { --bg: #111; --text: #f4f4f4; --accent: #25D366; --card-bg: #1e1e1e; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        h1, h2, h3 { text-align: center; margin-bottom: 10px; }
+        h1 { font-size: 2.2rem; margin-top: 40px; letter-spacing: 1px; }
+        h2 { color: var(--accent); font-size: 1.1rem; font-weight: normal; margin-bottom: 30px; }
+        
+        .video-container { width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5); margin-bottom: 30px; border: 2px solid #333; background: #000; }
+        video { width: 100%; display: block; }
+        
+        .card { background-color: var(--card-bg); padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--accent); }
+        .card h3 { text-align: left; margin-top: 0; color: var(--accent); font-size: 1.2rem; }
+        .card p { margin: 0; color: #ccc; font-size: 0.95rem; }
+        
+        .section-title { margin-top: 50px; border-bottom: 1px solid #333; padding-bottom: 10px; font-size: 1.5rem; }
+        
+        .faq { background-color: transparent; border: 1px solid #333; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+        .faq h4 { margin: 0 0 8px 0; font-size: 1rem; color: #fff; }
+        .faq p { margin: 0; font-size: 0.9rem; color: #aaa; }
+        
+        .pricing { text-align: center; margin: 40px 0; padding: 30px 20px; background-color: var(--card-bg); border-radius: 8px; border: 2px solid var(--accent); }
+        .pricing h3 { margin-top: 0; }
+        .price-tag { font-size: 2.8rem; font-weight: bold; color: var(--accent); margin: 15px 0; }
+        .price-sub { color: #888; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .cta-button { display: block; width: 100%; background-color: var(--accent); color: #000; text-align: center; padding: 16px 0; border-radius: 8px; font-weight: bold; font-size: 1.1rem; text-decoration: none; margin-top: 25px; transition: opacity 0.2s; }
+        .cta-button:active { opacity: 0.8; }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <div class="translate-wrapper">
-            <div id="google_translate_element"></div>
-        </div>
-
         <h1>SOVEREIGN GATEWAY</h1>
-        <div class="tagline">Premium Smart Automation for Your Business</div>
+        <h2>Modernize Your Business in 1 Day. No Monthly Fees.</h2>
 
-        <div class="pitch-box">
-            <h3>Upgrade Your Switchboards</h3>
-            <p>Give your cafe, restaurant, or office a modern upgrade. Control all your lights, fans, and exhausts directly from your smartphone with zero delay.</p>
+        <div class="video-container">
+            <video autoplay loop muted playsinline>
+                <source src="demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
 
-        <div class="pitch-box">
-            <h3>No Monthly Fees. Ever.</h3>
-            <p>Stop paying for cloud subscriptions. We install the physical hardware once. You own it forever. It works instantly, even if your main internet goes down.</p>
+        <div class="card">
+            <h3>No Hubs, No Subscriptions</h3>
+            <p>Every other system forces you to buy expensive automation hubs and pay monthly cloud fees. Ours runs directly on your local WiFi. If the internet goes down, your lights still work instantly.</p>
         </div>
 
-        <div class="pitch-box">
-            <h3>1-Day Installation</h3>
-            <p>We don't need to break your walls. We upgrade your existing wiring in a single day without disrupting your business.</p>
+        <div class="card">
+            <h3>Zero Wall Damage</h3>
+            <p>We do not break your plaster or ruin your decor. The hardware is installed silently behind your existing switchboards using your current wiring.</p>
         </div>
 
-        <a href="https://wa.me/9193828 81255" class="cta-btn">Message on WhatsApp for Pricing</a>
+        <div class="card">
+            <h3>Smartphone Control</h3>
+            <p>Give your managers direct control over ACs, exhaust fans, and lighting from a secure mobile app. Stop paying staff to leave the power running.</p>
+        </div>
+
+        <h3 class="section-title">Straight Answers</h3>
+
+        <div class="faq">
+            <h4>What happens if the WiFi breaks?</h4>
+            <p>The physical switches on your wall still work perfectly. You are never locked out of your own business.</p>
+        </div>
+        <div class="faq">
+            <h4>Is the hardware safe?</h4>
+            <p>Yes. We use heavy-duty, isolated relays rated for local AC power loads, not cheap imported smart plugs that melt under commercial pressure.</p>
+        </div>
+        <div class="faq">
+            <h4>Who fixes it if it stops working?</h4>
+            <p>I do. I am a local developer based right here in Hooghly. You get a direct WhatsApp line to the person who built your system, not an automated call center.</p>
+        </div>
+
+        <div class="pricing">
+            <h3>Single Room Deployment</h3>
+            <p style="color: #ccc; margin-bottom: 0;">Up to 4 Heavy Appliances (Lights, Fans, Plugs)</p>
+            <div class="price-tag">₹999</div>
+            <div class="price-sub">One-time setup fee. You own it forever.</div>
+            
+            <a href="https://wa.me/91938288125?text=Hi,%20I%20want%20to%20book%20a%20free%20site%20assessment%20for%20Sovereign%20Gateway." class="cta-button">
+                WhatsApp Me for a Site Assessment
+            </a>
+        </div>
     </div>
-
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </body>
 </html>
-
